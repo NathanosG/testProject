@@ -48,8 +48,6 @@ public class CrossRoad : MonoBehaviour
             /*if (the absolute value of z rotation OR absolute value of x rotation is > 80...)*/
             if ((Mathf.Abs(transform.localEulerAngles.z) > 80 && Mathf.Abs(transform.localEulerAngles.z) < 360-80) || (Mathf.Abs(transform.localEulerAngles.x) > 80 && Mathf.Abs(transform.localEulerAngles.x) < 360-80))
             {
-                Debug.Log(transform.localEulerAngles.z);
-                Debug.Log(transform.localEulerAngles.x);
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 GetComponent<Collider>().enabled = false;
                 fallen = true;
@@ -91,7 +89,7 @@ public class CrossRoad : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "Car")
+        if (other.gameObject.name != "floor")
         {
             GetComponent<Rigidbody>().useGravity = true;
             hit = true;

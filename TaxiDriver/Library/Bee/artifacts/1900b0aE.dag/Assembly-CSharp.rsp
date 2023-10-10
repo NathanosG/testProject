@@ -349,7 +349,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/CrossRoad.cs"
+"Assets/FollowCam.cs"
 "Assets/FrontLights.cs"
+"Assets/GarageDoor.cs"
 "Assets/Lights.cs"
 "Assets/Petrolcon.cs"
 "Assets/Scripts/AllWheel.cs"
@@ -385,6 +387,7 @@
 "Assets/Scripts/Status.cs"
 "Assets/Scripts/TrafficLight.cs"
 "Assets/Scripts/WheelController.cs"
+"Assets/ShutterOpen.cs"
 "Assets/Train.cs"
 -langversion:9.0
 

@@ -59,26 +59,37 @@ public class PickupPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(coll.bounds.Contains(other.bounds.min) && coll.bounds.Contains(other.bounds.max) && Mathf.Round(carScript.speed) == 0f)
+        if (other.gameObject.name == "Car")
         {
-            matArray[1] = material3;
-            rend.materials = matArray;
-            //rend.material = material3;
-            complete = true;
+            if(coll.bounds.Contains(other.bounds.min) && coll.bounds.Contains(other.bounds.max) && Mathf.Round(carScript.speed) == 0f)
+            {
+                matArray[1] = material3;
+                rend.materials = matArray;
+                //rend.material = material3;
+                complete = true;
+            }
         }
+
     }
     
     private void OnTriggerEnter(Collider other)
     {
-        matArray[1] = material2;
-        rend.materials = matArray;
-        //rend.material = material2;
+        if (other.gameObject.name == "Car")
+        {
+            matArray[1] = material2;
+            rend.materials = matArray;
+            //rend.material = material2;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        matArray[1] = material1;
-        rend.materials = matArray;
-        //rend.material = material1;
+        if (other.gameObject.name == "Car")
+        {
+            matArray[1] = material1;
+            rend.materials = matArray;
+            //rend.material = material1;
+        }
     }
 }
